@@ -45,13 +45,9 @@ environment.systemPackages = with pkgs; [
   lazygit # A terminal UI for git
 
   # Core Development Runtimes & SDKs
-  python3
   nodejs_20
   jdk21
   gradle
-
-  # Essential Build/Linker Tools
-  libtirpc.dev # Required for certain C/C++ builds
 
   # Development Environment & Tools
   vscode-fhs # Visual Studio Code with FHS compliance for broader tool compatibility
@@ -90,7 +86,6 @@ Here is a simplified example of a `flake.nix` for this project:
       devShells.x86_64-linux.default = pkgs.mkShell {
         # Define the packages available inside the shell
         buildInputs = with pkgs; [
-          python3
           nodejs_20
           jdk21
           gradle
@@ -103,6 +98,6 @@ Here is a simplified example of a `flake.nix` for this project:
 
 ### Verification and Conclusion
 
-The installation was successful, with no significant issues encountered. All tools were verified by checking their versions from the command line (e.g., `python --version`, `java --version`).
+The installation was successful, with no significant issues encountered. All tools were verified by checking their versions from the command line (e.g. `java --version`).
 
 The use of NixOS and Nix Flakes provides a robust foundation for development. This declarative and reproducible setup is highly beneficial for academic and professional work, as it guarantees a consistent environment across different machines and over time.
