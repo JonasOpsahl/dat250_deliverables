@@ -26,6 +26,8 @@ This solution provides the necessary flexibility:
 
 In my opinion there is nothing glaringly obvious missing in this implementation, based on the requirements we were give. I did however not do the optional tasks, only the mandatory ones. Also I could probably have used Json serializing more, aswell as made my swagger ui better.
 
+Also, right now I dont have any actual authentication to check if a user is the user they say they are. All you need to do is include the userId you want to usein the API requests. This is obviously not good and a major security risk. But something I can do in the future is to for example use Bearer tokens as an authentication mechanism, but for now this is missing.
+
 ---
 
 ## Additional information (not necessarily relevant (NixOS propaganda))
